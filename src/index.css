@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-card-border: hsl(var(--card-border));
+
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-popover-border: hsl(var(--popover-border));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-primary-border: var(--primary-border);
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-secondary-border: var(--secondary-border);
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-muted-border: var(--muted-border);
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-accent-border: var(--accent-border);
+
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-destructive-border: var(--destructive-border);
+
+  --color-sidebar: hsl(var(--sidebar));
+  --color-sidebar-foreground: hsl(var(--sidebar-foreground));
+  --color-sidebar-border: hsl(var(--sidebar-border));
+  --color-sidebar-primary: hsl(var(--sidebar-primary));
+  --color-sidebar-primary-foreground: hsl(var(--sidebar-primary-foreground));
+  --color-sidebar-primary-border: var(--sidebar-primary-border);
+  --color-sidebar-accent: hsl(var(--sidebar-accent));
+  --color-sidebar-accent-foreground: hsl(var(--sidebar-accent-foreground));
+  --color-sidebar-accent-border: var(--sidebar-accent-border);
+  --color-sidebar-ring: hsl(var(--sidebar-ring));
+
+  --font-sans: var(--app-font-sans);
+  --font-display: var(--app-font-display);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --app-font-sans: 'DM Sans', sans-serif;
+  --app-font-display: 'Bowlby One', cursive;
+
+  /* Default to Dark Mode because of Drag Race vibes! */
+  --button-outline: rgba(255,255,255, .10);
+  --badge-outline: rgba(255,255,255, .05);
+
+  --opaque-button-border-intensity: 9;
+
+  --elevate-1: rgba(255,255,255, .04);
+  --elevate-2: rgba(255,255,255, .09);
+
+  /* Deep purple dark background */
+  --background: 280 50% 10%;
+  --foreground: 300 10% 98%;
+
+  /* Hot pink and purple neon */
+  --border: 280 40% 25%;
+  --card: 280 50% 12%;
+  --card-foreground: 300 10% 98%;
+  --card-border: 280 40% 30%;
+
+  --popover: 280 50% 10%;
+  --popover-foreground: 300 10% 98%;
+  --popover-border: 280 40% 30%;
+
+  /* Hot Pink Primary */
+  --primary: 326 100% 54%;
+  --primary-foreground: 0 0% 100%;
+
+  /* Electric Purple Secondary */
+  --secondary: 275 100% 60%;
+  --secondary-foreground: 0 0% 100%;
+
+  /* Subtle purple muted */
+  --muted: 280 40% 20%;
+  --muted-foreground: 280 20% 70%;
+
+  /* Bright Gold Accent */
+  --accent: 51 100% 50%;
+  --accent-foreground: 280 50% 10%;
+
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 210 40% 98%;
+
+  --input: 280 40% 30%;
+  --ring: 326 100% 54%;
+
+  --sidebar: 280 50% 10%;
+  --sidebar-foreground: 300 10% 98%;
+  --sidebar-border: 280 40% 30%;
+  --sidebar-primary: 326 100% 54%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 280 40% 20%;
+  --sidebar-accent-foreground: 300 10% 98%;
+  --sidebar-ring: 326 100% 54%;
+
+  --radius: 1rem;
+}
+
+.dark {
+  /* Same as root since it's default dark */
+  --background: 280 50% 10%;
+  --foreground: 300 10% 98%;
+  --border: 280 40% 25%;
+  --card: 280 50% 12%;
+  --card-foreground: 300 10% 98%;
+  --card-border: 280 40% 30%;
+  --popover: 280 50% 10%;
+  --popover-foreground: 300 10% 98%;
+  --popover-border: 280 40% 30%;
+  --primary: 326 100% 54%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 275 100% 60%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 280 40% 20%;
+  --muted-foreground: 280 20% 70%;
+  --accent: 51 100% 50%;
+  --accent-foreground: 280 50% 10%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 210 40% 98%;
+  --input: 280 40% 30%;
+  --ring: 326 100% 54%;
+  --sidebar: 280 50% 10%;
+  --sidebar-foreground: 300 10% 98%;
+  --sidebar-border: 280 40% 30%;
+  --sidebar-primary: 326 100% 54%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 280 40% 20%;
+  --sidebar-accent-foreground: 300 10% 98%;
+  --sidebar-ring: 326 100% 54%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground selection:bg-primary selection:text-white min-h-[100dvh];
+    background-image: 
+      radial-gradient(circle at 15% 50%, rgba(255, 20, 147, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 85% 30%, rgba(157, 0, 255, 0.15) 0%, transparent 50%);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--app-font-display);
+    text-transform: uppercase;
+  }
+}
+
+.glitter-text {
+  background: linear-gradient(to right, #FF1493, #9D00FF, #FFD700, #FF1493);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shine 3s linear infinite;
+}
+
+.neon-glow {
+  text-shadow: 0 0 10px rgba(255, 20, 147, 0.8),
+               0 0 20px rgba(255, 20, 147, 0.6),
+               0 0 30px rgba(157, 0, 255, 0.4);
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(5deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
