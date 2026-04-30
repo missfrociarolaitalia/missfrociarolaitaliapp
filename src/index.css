@@ -59,6 +59,73 @@
   100% {
     transform: translateY(0px) rotate(0deg);
   }
+ .logo {
+  width: 220px;
+  margin: 20px auto;
+  display: block;
+}
+
+.since {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.hero {
+  margin: 20px 0;
+}
+
+.subtitle {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.cta {
+  background: linear-gradient(90deg, hotpink, purple, gold);
+  padding: 15px;
+  border-radius: 25px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  width: 100%;
+  font-size: 18px;
+  animation: pulse 2s infinite;
+}
+
+.menu button {
+  background: linear-gradient(45deg, #ff1493, #8000ff);
+  border: none;
+  margin: 8px 0;
+  padding: 15px;
+  width: 100%;
+  border-radius: 20px;
+  color: white;
+  font-size: 18px;
+}
+
+.social {
+  background: black;
+  border: 2px solid hotpink;
+  color: hotpink;
+  padding: 12px;
+  margin: 5px;
+  width: 100%;
+  border-radius: 15px;
+}
+
+/* ✨ GLOW TEXT */
+.glow {
+  text-shadow:
+    0 0 10px hotpink,
+    0 0 20px purple,
+    0 0 30px gold;
+}
+
+/* ✨ ANIMAZIONI */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
 }
 
 .animate-float {
